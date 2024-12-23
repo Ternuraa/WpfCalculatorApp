@@ -1,6 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using System.Net.Http;
 using System.Text;
+using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -11,12 +12,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Newtonsoft.Json;
-using System;
-using System.Collections.ObjectModel;
-using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 
 namespace WpfCalculatorApp
 {
@@ -32,8 +27,7 @@ namespace WpfCalculatorApp
             LoadSavedNumbers();
         }
 
-        private async 
-        Task LoadSavedNumbers()
+        private async Task LoadSavedNumbers()
         {
             try
             {
@@ -143,17 +137,5 @@ namespace WpfCalculatorApp
                 SavedNumbersList.SelectedItem = null;
             }
         }
-    }
-
-    public class SavedNumber
-    {
-        public int Id { get; set; }
-        public double Number { get; set; }
-    }
-
-    public class OperationResult
-    {
-        public int Id { get; set; }
-        public double Result { get; set; }
     }
 }
